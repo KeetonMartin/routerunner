@@ -37,32 +37,32 @@ export default function LocationPicker(props) {
     locations = airports;
   }
 
-  const [selected, setSelected] = useState(locations[Math.floor(Math.random()*locations.length)])
+  const [selected, setSelected] = useState(locations[Math.floor(Math.random() * locations.length)])
   const [query, setQuery] = useState('')
 
-  const filteredPeople =
+  const filteredLocations =
     query === ''
       ? locations
-      : locations.filter((person) =>
-          person.name
-            .toLowerCase()
-            .replace(/\s+/g, '')
-            .includes(query.toLowerCase().replace(/\s+/g, ''))
-        )
+      : locations.filter((location) =>
+        location.name
+          .toLowerCase()
+          .replace(/\s+/g, '')
+          .includes(query.toLowerCase().replace(/\s+/g, ''))
+      )
 
   return (
-    <div className=" top-16 w-72">
+    <div className="static top-16 w-72">
       <Combobox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
           <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
             <Combobox.Input
-              className="w-full border-none py-3 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
-              displayValue={(person) => person.name}
+              className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-base-content focus:ring-0"
+              displayValue={(location) => location.name}
               onChange={(event) => setQuery(event.target.value)}
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon
-                className="h-5 w-5 text-gray-400"
+                className="h-5 w-5 text-base-content"
                 aria-hidden="true"
               />
             </Combobox.Button>
@@ -74,21 +74,21 @@ export default function LocationPicker(props) {
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {filteredPeople.length === 0 && query !== '' ? (
-                <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
+            <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-primary-content py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              {filteredLocations.length === 0 && query !== '' ? (
+                <div className="relative cursor-default select-none py-2 px-4 text-base-content">
                   Nothing found.
                 </div>
               ) : (
-                filteredPeople.map((person) => (
+                filteredLocations.map((location) => (
                   <Combobox.Option
-                    key={person.id}
+                    key={location.id}
                     className={({ active }) =>
                       `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                        active ? 'bg-teal-600 text-white' : 'text-gray-900'
+                        active ? 'bg-neutral-focus text-neutral-content' : 'text-neutral-focus'
                       }`
                     }
-                    value={person}
+                    value={location}
                   >
                     {({ selected, active }) => (
                       <>
@@ -97,12 +97,12 @@ export default function LocationPicker(props) {
                             selected ? 'font-medium' : 'font-normal'
                           }`}
                         >
-                          {person.name}
+                          {location.name}
                         </span>
                         {selected ? (
                           <span
                             className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                              active ? 'text-white' : 'text-teal-600'
+                              active ? 'text-neutral-content' : 'text-accent-content'
                             }`}
                           >
                             <CheckIcon className="h-5 w-5" aria-hidden="true" />
@@ -118,6 +118,7 @@ export default function LocationPicker(props) {
         </div>
       </Combobox>
     </div>
+    
   )
 }
 
