@@ -1,26 +1,99 @@
-import { Button, Hero, Card, Link, Form, Input } from 'react-daisyui'
-import LocationPicker from './combobox'
-import HeroCard from './heroCard'
+import React, { Component } from "react";
+import { Button, Progress } from 'react-daisyui'
+import QueryBuilder from './heroCard'
 
-export default (props) => {
-    return (
-        <div className="hero min-h-[1rem] bg-base-200" style={{ backgroundImage: `url("https://i.imgur.com/9Elfmcj.png")` }}>
-            <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content text-primary-content">
-                <div className="max-w-full space-y-4 py-8
-">
+class RouteRunnerHero extends Component {
 
-                    <h1 className='text-5xl font-bold'>Welcome to RouteRunner</h1>
-                    <p className="py-6">You tell us which city-pair you fly the most, we'll tell you which credit
-                        card to get to optimize your points or miles.</p>
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: false,
+        };
+        this.handleAirportsClick.bind(this);
+        this.handleCitiesClick.bind(this);
 
-                    <div class="grid grid-cols-2">
-                        <HeroCard cardTitle="Select Cities" buttonName="Find Cards" airportMode="off" pickerOneTitle="First Metro Area" pickerTwoTitle="Second Metro Area" />
-                        <HeroCard cardTitle="Select Airports" buttonName="Find Cards" airportMode="on" pickerOneTitle="First Airport" pickerTwoTitle="Second Airport" />
+    }
+
+    toggleLoader = () => {
+        if (!this.state.loading) {
+            this.setState({ loading: true });
+        } else {
+            this.setState({ loading: false });
+        }
+    };
+
+    handleAirportsClick = () => {
+        // this.toggleLoader();
+        this.props.setStateToAirportMode();
+    }
+
+    handleCitiesClick = () => {
+        // this.toggleLoader();
+        this.props.setStateToCityMode();
+    }
+
+
+    render() {
+        return (
+            <div>
+                <div className="hero min-h-[1rem] bg-base-200" style={{ backgroundImage: `url("https://i.imgur.com/9Elfmcj.png")` }}>
+                    <div className="hero-overlay bg-opacity-60"></div>
+                    <div className="hero-content text-center text-primary-content">
+                        <div className="max-w-full space-y-4 py-8">
+
+                            <h1 className='text-5xl font-bold'>Welcome to RouteRunner</h1>
+                            <p className="py-6">You tell us which city-pair you fly the most, we'll tell you which credit
+                                card to get to optimize your points or miles.</p>
+
+                            <div class="grid grid-cols-2">
+                                <QueryBuilder
+                                    cardTitle="Select Cities"
+                                    buttonName="Find Cards"
+                                    airportMode="off"
+                                    pickerOneTitle="First Metro Area"
+                                    pickerTwoTitle="Second Metro Area"
+                                    toggleLoader={this.toggleLoader}
+                                    setStateToAirportMode={this.handleAirportsClick}
+                                    setStateToCityMode={this.handleCitiesClick}
+                                />
+                                <QueryBuilder
+                                    cardTitle="Select Airports"
+                                    buttonName="Find Cards"
+                                    airportMode="on"
+                                    pickerOneTitle="First Airport"
+                                    pickerTwoTitle="Second Airport"
+                                    toggleLoader={this.toggleLoader}
+                                    setStateToAirportMode={this.setStateToAirportMode}
+                                    setStateToCityMode={this.setStateToCityMode}
+                                />
+                            </div>
+
+                        </div>
+
                     </div>
-
                 </div>
+
+
+                <div className="loadingContainer flex items-center justify-center h-32">
+                    {this.state.loading ? (
+                        <Progress className="w-56" />
+                    ) : null}
+
+                    <Button
+                        onClick={() => this.toggleLoader()}
+                        variant={"primary"}
+                        size="lg"
+                    >
+                        {this.state.loading ? "Hide Loader" : "Show Loader"}
+                    </Button>
+                </div>
+
+
             </div>
-        </div>
-    )
+
+
+        )
+    }
 }
+
+export default RouteRunnerHero;

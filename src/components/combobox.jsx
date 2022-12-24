@@ -33,7 +33,7 @@ const airports = [
 export default function LocationPicker(props) {
 
   var locations = cities;
-  if (props.airportMode == "on") {
+  if (props.airportMode === "on") {
     locations = airports;
   }
 
