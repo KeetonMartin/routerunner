@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Button, Progress } from 'react-daisyui'
 import QueryBuilder from './heroCard'
 
 class RouteRunnerHero extends Component {
@@ -45,7 +44,7 @@ class RouteRunnerHero extends Component {
                             <p className="py-6">You tell us which city-pair you fly the most, we'll tell you which credit
                                 card to get to optimize your points or miles.</p>
 
-                            <div class="grid grid-cols-2">
+                            <div class="grid grid-cols-3 place-items-center">
                                 <QueryBuilder
                                     cardTitle="Select Cities"
                                     buttonName="Find Cards"
@@ -56,6 +55,8 @@ class RouteRunnerHero extends Component {
                                     setStateToAirportMode={this.handleAirportsClick}
                                     setStateToCityMode={this.handleCitiesClick}
                                 />
+                                <div className="divider divider-horizontal">OR</div>
+
                                 <QueryBuilder
                                     cardTitle="Select Airports"
                                     buttonName="Find Cards"
@@ -74,7 +75,7 @@ class RouteRunnerHero extends Component {
                 </div>
 
 
-                <div className="loadingContainer flex items-center justify-center h-32">
+                {/* <div className="loadingContainer flex items-center justify-center h-32">
                     {this.state.loading ? (
                         <Progress className="w-56" />
                     ) : null}
@@ -86,7 +87,7 @@ class RouteRunnerHero extends Component {
                     >
                         {this.state.loading ? "Hide Loader" : "Show Loader"}
                     </Button>
-                </div>
+                </div> */}
 
 
             </div>
