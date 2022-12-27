@@ -1,8 +1,7 @@
-import { Button, Hero, Card, Link, Form, Input } from 'react-daisyui'
+import { Card, Form } from 'react-daisyui'
 import LocationPicker from './combobox'
 import React from 'react'
-import { Result } from 'postcss';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { enableAirportMode, enableCityMode } from '../features/insightsSlice'
 
 
