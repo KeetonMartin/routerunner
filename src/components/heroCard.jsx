@@ -4,7 +4,6 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { enableAirportMode, enableCityMode } from '../features/insightsSlice'
 
-
 class QueryBuilder extends React.Component {
     constructor(props) {
         super(props);
@@ -52,8 +51,8 @@ class QueryBuilder extends React.Component {
                     <Form className='space-y-4 px-8 py-5'>
                         <h1 className='card-title'>{this.props.cardTitle}</h1>
 
-                        <LocationPicker ref={(ref) => this.LocationPickerTop = ref} />
-                        <LocationPicker ref={(ref) => this.LocationPickerBottom = ref} />
+                        <LocationPicker airportMode={this.props.airportMode} which="1"/>
+                        <LocationPicker airportMode={this.props.airportMode} which="2"/>
 
 
                     </Form>
