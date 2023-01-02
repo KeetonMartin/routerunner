@@ -126,11 +126,22 @@ function LocationPicker(props) {
   var locations = cities;
   if (props.airportMode === "on") {
     locations = airports;
+  }  
+  
+  const [selected, setSelected] = useState(locations[parseInt(props.which)])
+  const [query, setQuery] = useState('')
+
+  const dispatch = useDispatch();
+
+  let locationsCopy = locations.slice();
+  if (props.which === "2") {
+    const index = locationsCopy.indexOf(dispatch(setSelectedCity1(selected.cityId)));
+    locationsCopy.splice(index, 1)
+    
   }
 
-  const [selected, setSelected] = useState(locations[Math.floor(Math.random() * 5)])
-  const [query, setQuery] = useState('')
-  const dispatch = useDispatch();
+  // [selected, setSelected] = useState(locations[Math.floor(Math.random() * 5)])
+
 
   const filteredLocations =
     query === ''
