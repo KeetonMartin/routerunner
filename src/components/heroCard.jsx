@@ -56,9 +56,9 @@ class QueryBuilder extends React.Component {
 
 
                     </Form>
-                    <div class="card-actions justify-center">
+                    {/* <div class="card-actions justify-center">
                         <CustomButton buttonName={this.props.buttonName} cardTitle={this.props.cardTitle} />
-                    </div>
+                    </div> */}
 
                 </Card.Body>
             </Card>

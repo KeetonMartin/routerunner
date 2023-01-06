@@ -97,7 +97,8 @@ function InsightsHeading(props) {
 }
 
 function NeutralHeading(props) {
-    return <h2 className='text-3xl font-bold'>Click {<span className="badge badge-lg badge-accent">Find Cards</span>} above to get started</h2>
+    // return <h2 className='text-3xl font-bold'>Click {<span className="badge badge-lg badge-accent">Find Cards</span>} above to get started</h2>
+    return <h2 className='text-3xl font-bold'>Choose your cities above to get started</h2>
 }
 
 function AirportHeading(props) {
