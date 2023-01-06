@@ -257,7 +257,7 @@ function TableOfData(props) {
                         <th>Largest Carrier Fare</th>
                         <th>Lowest Fare Carrier</th>
                         <th>Lowest Fare Carrier Fare</th>
-                        <th>Nsmiles</th>
+                        <th>Miles</th>
                         <th>Year</th>
                         <th>Quarter</th>
                     </tr>
