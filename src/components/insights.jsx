@@ -110,7 +110,7 @@ function CityHeading(props) {
 }
 
 function TableOfData(props) {
-    
+
     const [data, setData] = useState(null);
 
     const selectedCity1 = useSelector((state) => state.selections.selectedCity1);
@@ -201,36 +201,94 @@ function TableOfData(props) {
         return null;
     }
 
+    let airlineCodes = {
+        "3M": "Silver",
+        "AA": "American",
+        "AS": "Alaska",
+        "B6": "JetBlue",
+        "DL": "Delta",
+        "F9": "Frontier",
+        "G4": "Allegiant",
+        "MX": "Mexicana",
+        "NK": "Spirit",
+        "SY": "Sun Country",
+        "UA": "United",
+        "WN": "Southwest",
+        "XP": "Avelo",
+        "VX": "Virgin America",
+        "FL": "AirTran"
+    }
+
+    let logos = {
+        "Silver": "",
+        "American": "https://i.pinimg.com/originals/a2/61/08/a26108757d054158beb1157275db8649.jpg",
+        "Alaska": "https://i.imgur.com/k5pNbUr.png",
+        "JetBlue": "https://www.jetblue.com/magnoliapublic/dam/ui-assets/imagery/info-assets/logos-misc/JetBlue-og-image.jpg",
+        "Delta": "https://img.favpng.com/19/9/1/delta-air-lines-image-computer-icons-logo-vector-graphics-png-favpng-s1SBMZREacvE4Fcibx79aKRCy.jpg",
+        "Frontier": "https://logos-world.net/wp-content/uploads/2021/03/Frontier-Airlines-Emblem.png",
+        "Allegiant": "https://1000logos.net/wp-content/uploads/2021/04/Allegiant-Air-logo.png",
+        "Mexicana": "",
+        "Spirit": "https://www.logo.wine/a/logo/Spirit_Airlines/Spirit_Airlines-Logo.wine.svg",
+        "Sun Country": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/wv5lkswskqzhkqro47dg",
+        "United": "https://i.imgur.com/jiyBO1D.jpg",
+        "Southwest": "https://logos-world.net/wp-content/uploads/2020/10/Southwest-Airlines-Emblem.png",
+        "Avelo": "",
+        "Amex": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
+        "The Platinum Card from AMEX": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
+        "Chase Sapphire Reserve": "https://1000logos.net/wp-content/uploads/2016/11/Shape-of-the-Chase-logo-500x311.jpg",
+        "Capital One Venture X": "https://play-lh.googleusercontent.com/GhAZTgji_F_YJ_TmisXH7J0PgIOYNy4vLPULklCV3Ua6cV3epNZki5DxsAe-KZB7XA",
+        "Alaska Airlines Visa Signature": "https://yt3.ggpht.com/ytc/AMLnZu-C-uN4bIkAAPybtvT92uFskxUC76aU_JFD05Rpxg=s900-c-k-c0x00ffffff-no-rj",
+        "United Explorer Card": "https://i.imgur.com/jiyBO1D.jpg",
+        "Virgin America": "https://download.logo.wine/logo/Virgin_America/Virgin_America-Logo.wine.png",
+        "AirTran": "https://1000logos.net/wp-content/uploads/2020/03/AirTran-Airways-Logo.jpg"        
+    }
+
     return (
         <div className="overflow-x-auto">
-            {outputString}
+            <h2 className='text-xl py-4'>{outputString}</h2>
+            
 
             <table className="table table-compact w-full">
                 <thead>
                     <tr>
-                        <th>City 1</th>
-                        <th>City 2</th>
-                        <th>Year</th>
-                        <th>Quarter</th>
-                        <th>Nsmiles</th>
+                        {/* <th>City 1</th>
+                        <th>City 2</th> */}
                         <th>Largest Carrier</th>
                         <th>Largest Carrier Fare</th>
                         <th>Lowest Fare Carrier</th>
                         <th>Lowest Fare Carrier Fare</th>
+                        <th>Nsmiles</th>
+                        <th>Year</th>
+                        <th>Quarter</th>
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((item) => (
                         <tr key={item.id}>
-                            <td>{item.city1}</td>
-                            <td>{item.city2}</td>
+                            {/* <td>{item.city1}</td>
+                            <td>{item.city2}</td> */}
+                            <td>
+                                <div className="avatar">
+                                    <div className="mask mask-squircle w-12 h-12">
+                                        <img src={logos[airlineCodes[item.carrier_lg]]} alt={item.carrier_lg} />
+                                        {/* <img src={require("../assets/unitedLogo.jpg")} alt={item.carrier_lg} /> */}
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(parseFloat(item.fare_lg).toFixed(0)))}</td>
+                            <td>
+                                <div className="avatar">
+                                    <div className="mask mask-squircle w-12 h-12">
+                                        <img src={logos[airlineCodes[item.carrier_low]]} alt={item.carrier_low} />
+                                        {/* <img src={require("../assets/unitedLogo.jpg")} alt={item.carrier_lg} /> */}
+                                    </div>
+                                </div>
+                            </td>
+                            {/* <td>{item.fare_low}</td> */}
+                            <td>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(parseFloat(item.fare_low).toFixed(0)))}</td>
+                            <td>{item.nsmiles}</td>
                             <td>{item.year}</td>
                             <td>{item.quarter}</td>
-                            <td>{item.nsmiles}</td>
-                            <td>{item.carrier_lg}</td>
-                            <td>{item.fare_lg}</td>
-                            <td>{item.carrier_low}</td>
-                            <td>{item.fare_low}</td>
                         </tr>
                     ))}
                 </tbody>
