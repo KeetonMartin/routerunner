@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import { useSelector } from 'react-redux'
+import { useTable } from 'react-table';
 
 import axios from 'axios';
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { setSelectedAirport1 } from "../features/selectionsSlice";
-import { useTable } from 'react-table';
 import { Button, Progress } from 'react-daisyui'
 
 class Insights extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -38,12 +37,9 @@ class Insights extends Component {
             <div>
                 <div>
                     <div className="hero from-primary to-accent text-primary-content min-h-min bg-gradient-to-br">
-                        {/* <div className="hero-overlay bg-opacity-60"></div> */}
                         <div className="hero-content mx-auto max-w-md text-center md:max-w-full">
                             <div className="max-w-full space-y-4 py-8">
-
                                 <InsightsHeading />
-                                {/* Daisy UI Horizonal Divider: */}
                                 <hr className="my-4" />
                                 <div className="loadingContainer flex items-center justify-center h-16">
                                     {this.state.loading ? (
@@ -54,12 +50,10 @@ class Insights extends Component {
 
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
-        )
+        );
     }
 }
 
@@ -184,18 +178,59 @@ function TableOfData(props) {
         },
     ];
 
-    let outputString = data ? data[0]["city1"] + " to " + data[0]["city2"] : 'Loading...';
+    let outputString = data && data[0] && data[0]["city1"] && data[0]["city2"] ? data[0]["city1"] + " to " + data[0]["city2"] : 'Loading...';
+
+    // return (
+    //     <>
+    //         <div>
+    //             <Table columns={columns} data={data} />
+    //         </div>
+
+    //         {/* <Table columns={columns} data={data} /> */}
+    //     </>
+    // )
+
+    console.log("================================")
+    console.log("data: " + JSON.stringify(data));
+
+
+    if (!data) {
+        return null;
+    }
 
     return (
-        <>
-            <div>
-                {outputString}
-                <Table columns={columns} data={data} />
-            </div>
+        <div className="overflow-x-auto">
+            {outputString}
 
-            {/* <Table columns={columns} data={data} /> */}
-        </>
-    )
+            <table className="table table-compact w-full">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Quarter</th>
+                        <th>Nsmiles</th>
+                        <th>Largest Carrier</th>
+                        <th>Largest Carrier Fare</th>
+                        <th>Lowest Fare Carrier</th>
+                        <th>Lowest Fare Carrier Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((item) => (
+                        <tr key={item.id}>
+                            <td>{item.year}</td>
+                            <td>{item.quarter}</td>
+                            <td>{item.nsmiles}</td>
+                            <td>{item.carrier_lg}</td>
+                            <td>{item.fare_lg}</td>
+                            <td>{item.carrier_low}</td>
+                            <td>{item.fare_low}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+
 }
 
 function timeout(delay) {
@@ -208,7 +243,7 @@ function TableHead(props) {
     for (let i = 0; i < columns.length; i++) {
         // note: we are adding a key prop here to allow react to uniquely identify each
         // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-        colNames.push(<TableValue key={i} value={columns[i]}/>);
+        colNames.push(<TableValue key={i} value={columns[i]} />);
     }
     return <thead>{colNames}</thead>;
 }
@@ -226,7 +261,7 @@ function Table(props) {
     return (
         <><h1>Table</h1><div className="overflow-x-auto">
             <table className="table table-zebra w-full">
-                    <TableHead columns={columns}/>
+                <TableHead columns={columns} />
                 <tbody>
                     <tr>
                         <td>exampleName</td>
