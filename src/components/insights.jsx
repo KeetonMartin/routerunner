@@ -109,6 +109,7 @@ function CityHeading(props) {
 }
 
 function TableOfData(props) {
+    
     const [data, setData] = useState(null);
 
     const selectedCity1 = useSelector((state) => state.selections.selectedCity1);
@@ -126,7 +127,7 @@ function TableOfData(props) {
 
             try {
                 const params = {
-                    $where: 'citymarketid_1 = ' + selectedCity1 + ' AND citymarketid_2 = ' + selectedCity2,
+                    $where: '(citymarketid_1 = ' + selectedCity1 + ' AND citymarketid_2 = ' + selectedCity2 + ') OR (citymarketid_1 = ' + selectedCity2 + ' AND citymarketid_2 = ' + selectedCity1 + ')',
                     // $where: 'citymarketid_2 = '+ selectedCity2
                     // $where: 'city1='+selectedCity1,
                     // $where: 'city2='+selectedCity2,
@@ -179,6 +180,7 @@ function TableOfData(props) {
     ];
 
     let outputString = data && data[0] && data[0]["city1"] && data[0]["city2"] ? data[0]["city1"] + " to " + data[0]["city2"] : 'Loading...';
+    console.log("our latest output string: ", outputString);
 
     // return (
     //     <>
@@ -205,6 +207,8 @@ function TableOfData(props) {
             <table className="table table-compact w-full">
                 <thead>
                     <tr>
+                        <th>City 1</th>
+                        <th>City 2</th>
                         <th>Year</th>
                         <th>Quarter</th>
                         <th>Nsmiles</th>
@@ -217,6 +221,8 @@ function TableOfData(props) {
                 <tbody>
                     {data.map((item) => (
                         <tr key={item.id}>
+                            <td>{item.city1}</td>
+                            <td>{item.city2}</td>
                             <td>{item.year}</td>
                             <td>{item.quarter}</td>
                             <td>{item.nsmiles}</td>

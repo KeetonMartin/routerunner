@@ -126,19 +126,13 @@ function LocationPicker(props) {
   var locations = cities;
   if (props.airportMode === "on") {
     locations = airports;
-  }  
-  
+  }
+
   const [selected, setSelected] = useState(locations[parseInt(props.which)])
   const [query, setQuery] = useState('')
 
   const dispatch = useDispatch();
 
-  let locationsCopy = locations.slice();
-  if (props.which === "2") {
-    const index = locationsCopy.indexOf(dispatch(setSelectedCity1(selected.cityId)));
-    locationsCopy.splice(index, 1)
-    
-  }
 
   // [selected, setSelected] = useState(locations[Math.floor(Math.random() * 5)])
 
@@ -163,13 +157,17 @@ function LocationPicker(props) {
         dispatch(setSelectedAirport2(selected.name));
       }
     } else if (props.airportMode === "off") {
+      console.log("Not in airport mode");
       if (props.which === "1") {
+        console.log("UPDATING CITY 1 TO BE ", selected.name);
         dispatch(setSelectedCity1(selected.cityId));
       } else if (props.which === "2") {
+        console.log("UPDATING CITY 2 TO BE ", selected.name);
         dispatch(setSelectedCity2(selected.cityId));
       }
-    } else
-      dispatch(setSelectedCity1(selected.name));
+    } else {
+      console.warn("Unknown state of airportMode");
+    }
   });
 
   return (
