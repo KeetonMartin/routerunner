@@ -36,7 +36,7 @@ class Insights extends Component {
         return (
             <div>
                 <div>
-                    <div className="hero from-primary to-accent text-primary-content min-h-min bg-gradient-to-br">
+                    <div className="hero from-primary to-accent text-primary-content min-h-min bg-gradient-to-r">
                         <div className="hero-content mx-auto max-w-md text-center md:max-w-full">
                             <div className="max-w-full space-y-4 py-8">
                                 <InsightsHeading />
@@ -300,44 +300,6 @@ function TableOfData(props) {
 
 function timeout(delay) {
     return new Promise(res => setTimeout(res, delay));
-}
-
-function TableHead(props) {
-    let columns = props.columns
-    const colNames = [];
-    for (let i = 0; i < columns.length; i++) {
-        // note: we are adding a key prop here to allow react to uniquely identify each
-        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-        colNames.push(<TableValue key={i} value={columns[i]} />);
-    }
-    return <thead>{colNames}</thead>;
-}
-
-function TableValue(props) {
-    let value = props.columns
-}
-
-
-function Table(props) {
-    let columns = props.columns
-    let data = props.data
-    let loggableStatement = "data: " + JSON.stringify(data);
-    console.log(loggableStatement);
-    return (
-        <><h1>Table</h1><div className="overflow-x-auto">
-            <table className="table table-zebra w-full">
-                <TableHead columns={columns} />
-                <tbody>
-                    <tr>
-                        <td>exampleName</td>
-                        <td>exampleAge</td>
-                        <td>exampleGender</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div></>
-    );
 }
 
 export default Insights;
