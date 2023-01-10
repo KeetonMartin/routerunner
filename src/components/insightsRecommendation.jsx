@@ -5,7 +5,7 @@ class InsightsRecommendation extends Component {
         const { image, title, badgeTexts, logo } = this.props;
         const badges = badgeTexts.map((txt) => <div className="badge badge-primary">{txt}</div>);
         return (
-            <div className="card w-96 shadow-xl bg-neutral opacity-100 ">
+            <div className="card w-72 sm:w-96 shadow-xl bg-neutral opacity-100 ">
                 <figure><img className="object-cover h-48 w-96" src={image} alt={title} /></figure>
                 <div className="card-body">
                     <h2 className="card-title">

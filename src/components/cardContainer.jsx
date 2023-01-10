@@ -75,7 +75,7 @@ const CardContainer = (props) => {
             <InsightsRecommendation logo={props.logos[myEngine.largestCarrier]} image={props.splashArts[myEngine.largestCarrier]} title={"Largest Market Share: " + myEngine.largestCarrier} badgeTexts={[(parseFloat(myEngine.largestCarrierMS) * 100).toPrecision(3) + "% Market Share", "$" + (parseFloat(myEngine.largestCarrierFare)).toFixed(2) + " Average Fare"]}  />
             </div>
             <SectionHeading title={"Card Recommendations"} />
-            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch place-items-stretch">
+            <div className="grid place-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
             <InsightsRecommendation logo={props.logos[maxRCScard[0]]} image={props.splashArts[maxRCScard[0]]} title={maxRCScard[0]} badgeTexts={[(parseFloat(maxRCScard[1])).toFixed() + " RCS"]} />
             <InsightsRecommendation logo={props.logos[secondHighestRCScard[0]]} image={props.splashArts[secondHighestRCScard[0]]} title={secondHighestRCScard[0]} badgeTexts={[(parseFloat(secondHighestRCScard[1])).toFixed() + " RCS"]}  />
             <InsightsRecommendation logo={props.logos[thirdHighestRCScard[0]]} image={props.splashArts[thirdHighestRCScard[0]]} title={thirdHighestRCScard[0]} badgeTexts={[(parseFloat(thirdHighestRCScard[1])).toFixed() + " RCS"]} />
