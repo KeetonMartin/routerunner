@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/routerunner/static/css/main.07f9a3d8.css",
-    "main.js": "/routerunner/static/js/main.645ec12a.js",
+    "main.css": "/routerunner/static/css/main.c839fe57.css",
+    "main.js": "/routerunner/static/js/main.577e88ca.js",
     "index.html": "/routerunner/index.html",
-    "main.07f9a3d8.css.map": "/routerunner/static/css/main.07f9a3d8.css.map",
-    "main.645ec12a.js.map": "/routerunner/static/js/main.645ec12a.js.map"
+    "main.c839fe57.css.map": "/routerunner/static/css/main.c839fe57.css.map",
+    "main.577e88ca.js.map": "/routerunner/static/js/main.577e88ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.07f9a3d8.css",
-    "static/js/main.645ec12a.js"
+    "static/css/main.c839fe57.css",
+    "static/js/main.577e88ca.js"
   ]
 }
