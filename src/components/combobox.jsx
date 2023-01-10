@@ -128,7 +128,7 @@ function LocationPicker(props) {
     locations = airports;
   }
 
-  const [selected, setSelected] = useState(locations[parseInt(props.which)])
+  const [selected, setSelected] = useState(locations[(props.which === "1") ? 4 : 3])
   const [query, setQuery] = useState('')
 
   const dispatch = useDispatch();

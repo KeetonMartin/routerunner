@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { setSelectedAirport1 } from "../features/selectionsSlice";
 import { Button, Progress } from 'react-daisyui'
+import CardContainer from './cardContainer';
 
 class Insights extends Component {
     constructor(props) {
@@ -33,6 +34,73 @@ class Insights extends Component {
     }
 
     render() {
+        let airlineCodes = {
+            "3M": "Silver",
+            "AA": "American",
+            "AS": "Alaska",
+            "B6": "JetBlue",
+            "DL": "Delta",
+            "F9": "Frontier",
+            "G4": "Allegiant",
+            "MX": "Mexicana",
+            "NK": "Spirit",
+            "SY": "Sun Country",
+            "UA": "United",
+            "WN": "Southwest",
+            "XP": "Avelo",
+            "VX": "Virgin America",
+            "FL": "AirTran"
+        }
+
+        let logos = {
+            "Silver": "",
+            "American": "https://i.pinimg.com/originals/a2/61/08/a26108757d054158beb1157275db8649.jpg",
+            "Alaska": "https://i.imgur.com/k5pNbUr.png",
+            "JetBlue": "https://www.jetblue.com/magnoliapublic/dam/ui-assets/imagery/info-assets/logos-misc/JetBlue-og-image.jpg",
+            "Delta": "https://img.favpng.com/19/9/1/delta-air-lines-image-computer-icons-logo-vector-graphics-png-favpng-s1SBMZREacvE4Fcibx79aKRCy.jpg",
+            "Frontier": "https://logos-world.net/wp-content/uploads/2021/03/Frontier-Airlines-Emblem.png",
+            "Allegiant": "https://1000logos.net/wp-content/uploads/2021/04/Allegiant-Air-logo.png",
+            "Mexicana": "",
+            "Spirit": "https://www.logo.wine/a/logo/Spirit_Airlines/Spirit_Airlines-Logo.wine.svg",
+            "Sun Country": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/wv5lkswskqzhkqro47dg",
+            "United": "https://i.imgur.com/jiyBO1D.jpg",
+            "Southwest": "https://logos-world.net/wp-content/uploads/2020/10/Southwest-Airlines-Emblem.png",
+            "Avelo": "",
+            "Amex": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
+            "The Platinum Card from AMEX": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
+            "Chase Sapphire Reserve": "https://1000logos.net/wp-content/uploads/2016/11/Shape-of-the-Chase-logo-500x311.jpg",
+            "Capital One Venture X": "https://play-lh.googleusercontent.com/GhAZTgji_F_YJ_TmisXH7J0PgIOYNy4vLPULklCV3Ua6cV3epNZki5DxsAe-KZB7XA",
+            "Alaska Airlines Visa Signature": "https://yt3.ggpht.com/ytc/AMLnZu-C-uN4bIkAAPybtvT92uFskxUC76aU_JFD05Rpxg=s900-c-k-c0x00ffffff-no-rj",
+            "United Explorer Card": "https://i.imgur.com/jiyBO1D.jpg",
+            "Virgin America": "https://download.logo.wine/logo/Virgin_America/Virgin_America-Logo.wine.png",
+            "AirTran": "https://1000logos.net/wp-content/uploads/2020/03/AirTran-Airways-Logo.jpg"
+        }
+
+        //https://imgur.com/a/KsSCmGi
+        let splashArts = {
+            "Silver": "",
+            "American": "https://i.imgur.com/Mg3oc7M.png",
+            "Alaska": "https://i.imgur.com/qEAgrOl.jpg",
+            "JetBlue": "https://i.imgur.com/8i0bsBP.png",
+            "Delta": "https://www.sec.gov/Archives/edgar/data/27904/000101968710004423/delta_8k-ex99011.jpg",
+            "Frontier": "assets/frontierSplash.jpeg",
+            "Allegiant": "https://1000logos.net/wp-content/uploads/2021/04/Allegiant-Air-logo.png",
+            "Mexicana": "",
+            "Spirit": "https://i.imgur.com/NS0Jwme.png",
+            "Sun Country": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/wv5lkswskqzhkqro47dg",
+            "United": "https://i.imgur.com/hV3cZpS.jpg",
+            "Southwest": "https://i.imgur.com/BLrrdgI.jpeg",
+            "Avelo": "",
+            "Chase Sapphire Reserve": "https://i.imgur.com/VHVqbUk.png",
+            "Amex": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/Data/SVG/dls/worldservice-tile-brightblue.svg",
+            "The Platinum Card from AMEX": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/Data/SVG/dls/worldservice-tile-brightblue.svg",
+            "Capital One Venture X": "https://i.imgur.com/7DXlJOH.jpg",
+            "United Explorer Card": "https://i.imgur.com/hV3cZpS.jpg",
+            "Alaska Airlines Visa Signature": "https://i.imgur.com/qEAgrOl.jpg",
+            "Sun Country": "assets/sunCountrySplash.PNG",
+            "Frontier": "assets/frontierSplash.PNG"
+        }
+
         return (
             <div>
                 <div>
@@ -46,7 +114,8 @@ class Insights extends Component {
                                         <Progress className="w-56" />
                                     ) : null}
                                 </div>
-                                <TableOfData toggleSwitch={this.toggleLoader} />
+                                <CardContainer airlineCodes={airlineCodes} logos={logos} splashArts={splashArts}/>
+                                <TableOfData toggleSwitch={this.toggleLoader} airlineCodes={airlineCodes} logos={logos}  />
 
                             </div>
                         </div>
@@ -85,7 +154,8 @@ function InsightsHeading(props) {
     } else if (displayingCitiesInsights) {
         returnableH2 = <h2 className='text-xl '>Let's see what we got for {selectedCity1} to {selectedCity2}</h2>
     } else {
-        returnableH2 = <h2 className='text-xl '>We can recommend cards based on cities or airports... but not both</h2>
+        // returnableH2 = <h2 className='text-xl '>We can recommend cards based on cities or airports... but not both</h2>
+        returnableH2 = <h2 className='text-xl '>For now we can recommend cards based on cities... but not airports</h2>
     }
 
     // put returnableH1 and returnableH2 in a div and return them:
@@ -194,59 +264,18 @@ function TableOfData(props) {
     // )
 
     console.log("================================")
-    console.log("data: " + JSON.stringify(data));
+    // console.log("data: " + JSON.stringify(data));
 
 
     if (!data) {
         return null;
     }
 
-    let airlineCodes = {
-        "3M": "Silver",
-        "AA": "American",
-        "AS": "Alaska",
-        "B6": "JetBlue",
-        "DL": "Delta",
-        "F9": "Frontier",
-        "G4": "Allegiant",
-        "MX": "Mexicana",
-        "NK": "Spirit",
-        "SY": "Sun Country",
-        "UA": "United",
-        "WN": "Southwest",
-        "XP": "Avelo",
-        "VX": "Virgin America",
-        "FL": "AirTran"
-    }
-
-    let logos = {
-        "Silver": "",
-        "American": "https://i.pinimg.com/originals/a2/61/08/a26108757d054158beb1157275db8649.jpg",
-        "Alaska": "https://i.imgur.com/k5pNbUr.png",
-        "JetBlue": "https://www.jetblue.com/magnoliapublic/dam/ui-assets/imagery/info-assets/logos-misc/JetBlue-og-image.jpg",
-        "Delta": "https://img.favpng.com/19/9/1/delta-air-lines-image-computer-icons-logo-vector-graphics-png-favpng-s1SBMZREacvE4Fcibx79aKRCy.jpg",
-        "Frontier": "https://logos-world.net/wp-content/uploads/2021/03/Frontier-Airlines-Emblem.png",
-        "Allegiant": "https://1000logos.net/wp-content/uploads/2021/04/Allegiant-Air-logo.png",
-        "Mexicana": "",
-        "Spirit": "https://www.logo.wine/a/logo/Spirit_Airlines/Spirit_Airlines-Logo.wine.svg",
-        "Sun Country": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/wv5lkswskqzhkqro47dg",
-        "United": "https://i.imgur.com/jiyBO1D.jpg",
-        "Southwest": "https://logos-world.net/wp-content/uploads/2020/10/Southwest-Airlines-Emblem.png",
-        "Avelo": "",
-        "Amex": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
-        "The Platinum Card from AMEX": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
-        "Chase Sapphire Reserve": "https://1000logos.net/wp-content/uploads/2016/11/Shape-of-the-Chase-logo-500x311.jpg",
-        "Capital One Venture X": "https://play-lh.googleusercontent.com/GhAZTgji_F_YJ_TmisXH7J0PgIOYNy4vLPULklCV3Ua6cV3epNZki5DxsAe-KZB7XA",
-        "Alaska Airlines Visa Signature": "https://yt3.ggpht.com/ytc/AMLnZu-C-uN4bIkAAPybtvT92uFskxUC76aU_JFD05Rpxg=s900-c-k-c0x00ffffff-no-rj",
-        "United Explorer Card": "https://i.imgur.com/jiyBO1D.jpg",
-        "Virgin America": "https://download.logo.wine/logo/Virgin_America/Virgin_America-Logo.wine.png",
-        "AirTran": "https://1000logos.net/wp-content/uploads/2020/03/AirTran-Airways-Logo.jpg"        
-    }
 
     return (
         <div className="overflow-x-auto">
             <h2 className='text-xl py-4'>{outputString}</h2>
-            
+
 
             <table className="table table-compact w-full">
                 <thead>
@@ -270,7 +299,7 @@ function TableOfData(props) {
                             <td>
                                 <div className="avatar">
                                     <div className="mask mask-squircle w-12 h-12">
-                                        <img src={logos[airlineCodes[item.carrier_lg]]} alt={item.carrier_lg} />
+                                        <img src={props.logos[props.airlineCodes[item.carrier_lg]]} alt={item.carrier_lg} />
                                         {/* <img src={require("../assets/unitedLogo.jpg")} alt={item.carrier_lg} /> */}
                                     </div>
                                 </div>
@@ -279,7 +308,7 @@ function TableOfData(props) {
                             <td>
                                 <div className="avatar">
                                     <div className="mask mask-squircle w-12 h-12">
-                                        <img src={logos[airlineCodes[item.carrier_low]]} alt={item.carrier_low} />
+                                        <img src={props.logos[props.airlineCodes[item.carrier_low]]} alt={item.carrier_low} />
                                         {/* <img src={require("../assets/unitedLogo.jpg")} alt={item.carrier_lg} /> */}
                                     </div>
                                 </div>
