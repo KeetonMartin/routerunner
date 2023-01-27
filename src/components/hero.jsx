@@ -44,7 +44,7 @@ class RouteRunnerHero extends Component {
                             <p className="py-6">You tell us which city-pair you fly the most, we'll tell you which credit
                                 card to get to optimize your points or miles.</p>
 
-                            <div class="grid grid-cols-3 place-items-center">
+                            <div className="grid grid-cols-3 place-items-center">
                                 <QueryBuilder
                                     cardTitle="Select Cities"
                                     buttonName="Find Cards"

@@ -207,7 +207,8 @@ function TableOfData(props) {
                     <tr>
                         <th>Year</th>
                         <th>Quarter</th>
-                        <th>Nsmiles</th>
+                        <th>Daily Passengers</th>
+                        <th>Miles</th>
                         <th>Largest Carrier</th>
                         <th>Largest Carrier Fare</th>
                         <th>Lowest Fare Carrier</th>
@@ -220,6 +221,7 @@ function TableOfData(props) {
                             <td>{item.year}</td>
                             <td>{item.quarter}</td>
                             <td>{item.nsmiles}</td>
+                            <td>{item.passengers}</td>
                             <td>{item.carrier_lg}</td>
                             <td>{item.fare_lg}</td>
                             <td>{item.carrier_low}</td>
