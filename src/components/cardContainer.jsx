@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import axios from 'axios';
+import customCardData from '../customCardData.json';
+
 
 const CardContainer = (props) => {
 
@@ -69,17 +71,18 @@ const CardContainer = (props) => {
 
     return (
         <>
-            <SectionHeading title={"Market Leaders"} />
+            <SectionHeading title={"Latest Market Leaders"} />
             <div className="grid place-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
             <InsightsRecommendation logo={props.logos[myEngine.lowestFareCarrier]} image={props.splashArts[myEngine.lowestFareCarrier]} title={"Lowest Fares: " + myEngine.lowestFareCarrier} badgeTexts={[(parseFloat(myEngine.lowestFareCarrierMS) * 100).toPrecision(3) + "% Market Share", "$" + (parseFloat(myEngine.lowestFareCarrierFare)).toFixed(2) + " Average Fare"]}  />
             <InsightsRecommendation logo={props.logos[myEngine.largestCarrier]} image={props.splashArts[myEngine.largestCarrier]} title={"Largest Market Share: " + myEngine.largestCarrier} badgeTexts={[(parseFloat(myEngine.largestCarrierMS) * 100).toPrecision(3) + "% Market Share", "$" + (parseFloat(myEngine.largestCarrierFare)).toFixed(2) + " Average Fare"]}  />
             </div>
-            <SectionHeading title={"Card Recommendations"} />
+            <SectionHeading title={"Latest Card Recommendations"} />
             <div className="grid place-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
             <InsightsRecommendation logo={props.logos[maxRCScard[0]]} image={props.splashArts[maxRCScard[0]]} title={maxRCScard[0]} badgeTexts={[(parseFloat(maxRCScard[1])).toFixed() + " RCS"]} />
             <InsightsRecommendation logo={props.logos[secondHighestRCScard[0]]} image={props.splashArts[secondHighestRCScard[0]]} title={secondHighestRCScard[0]} badgeTexts={[(parseFloat(secondHighestRCScard[1])).toFixed() + " RCS"]}  />
             <InsightsRecommendation logo={props.logos[thirdHighestRCScard[0]]} image={props.splashArts[thirdHighestRCScard[0]]} title={thirdHighestRCScard[0]} badgeTexts={[(parseFloat(thirdHighestRCScard[1])).toFixed() + " RCS"]} />
             </div>
+            <div class="divider"></div>
             <SectionHeading title={"Historical Data"} />
         </>
     );
@@ -166,7 +169,8 @@ class RecommendationEngine {
     getCardScores(largestCarrier, lowestFareCarrier, largestCarrierMS, largestCarrierFare, lowestFareCarrierMS, lowestFareCarrierFare) {
 
         var cardDataJSON = ' [ { "name": "The Platinum Card from AMEX", "global_entry": true, "centurion_access": true, "capital_one_access": false, "priority_pass_access": true, "SUB_value": 1500, "annual_fee": 695, "compatible_airlines": [ { "airline_name": "Delta", "compatibility_score": 100, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "JetBlue", "compatibility_score": 80, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "American", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "United", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "Alaska", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false } ] }, { "name": "Alaska Airlines Visa Signature", "global_entry": false, "centurion_access": false, "capital_one_access": false, "priority_pass_access": false, "SUB_value": 600, "annual_fee": 75, "compatible_airlines": [ { "airline_name": "American", "compatibility_score": 100, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "Alaska", "compatibility_score": 100, "free_bag": true, "buddy_ticket": true, "airline_lounge_access": false, "priority_boarding": false } ] }, { "name": "United Explorer Card", "global_entry": true, "centurion_access": false, "capital_one_access": false, "priority_pass_access": false, "SUB_value": 600, "annual_fee": 95, "compatible_airlines": [ { "airline_name": "United", "compatibility_score": 100, "free_bag": true, "buddy_ticket": false, "airline_lounge_access": true, "priority_boarding": true } ] }, { "name": "Capital One Venture X", "global_entry": true, "centurion_access": false, "capital_one_access": true, "priority_pass_access": true, "SUB_value": 750, "annual_fee": 395, "compatible_airlines": [ { "airline_name": "Delta", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "JetBlue", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "American", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "United", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "Alaska", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false } ] }, { "name": "Chase Sapphire Reserve", "global_entry": true, "centurion_access": false, "capital_one_access": false, "priority_pass_access": true, "SUB_value": 900, "annual_fee": 550, "compatible_airlines": [ { "airline_name": "Delta", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "JetBlue", "compatibility_score": 100, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "American", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "United", "compatibility_score": 100, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "Alaska", "compatibility_score": 50, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false }, { "airline_name": "Southwest", "compatibility_score": 100, "free_bag": false, "buddy_ticket": false, "airline_lounge_access": false, "priority_boarding": false } ] } ] '
-        var cardData = JSON.parse(cardDataJSON);
+        // var cardData = JSON.parse(cardDataJSON);
+        var cardData = customCardData;
 
         cardData.forEach(card => {
             this.scoreMap.set(card.name, 0)
