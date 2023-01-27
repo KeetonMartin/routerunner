@@ -7,9 +7,9 @@ import { ReactComponent as GithubLogo } from '../assets/github-mark.svg';
 
 function Navbar({ title }) {
     return (
-        <div className="navbar bg-primary text-primary-content">
-            <div className="flex-none">
-                <button className="btn btn-square btn-ghost">
+        <div class="navbar from-primary to-accent text-primary-content min-h-min bg-gradient-to-r">
+            <div class="flex-none">
+                <button class="btn btn-square btn-ghost">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         className="bi bi-credit-card" viewBox="0 0 16 16">
                         <path

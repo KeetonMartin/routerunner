@@ -12,9 +12,11 @@ export const selectionsSlice = createSlice({
     },
     reducers: {
         setSelectedCity1: (state, action) => {
+            console.log("Updating STORE to set city 1 with this state ", action)
             state.selectedCity1 = action.payload;
         },
         setSelectedCity2: (state, action) => {
+            console.log("Updating STORE to set city 2 with this state ", action)
             state.selectedCity2 = action.payload;
         },
         setSelectedAirport1: (state, action) => {
