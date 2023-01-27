@@ -286,6 +286,7 @@ function TableOfData(props) {
                         <th>Largest Carrier Fare</th>
                         <th>Lowest Fare Carrier</th>
                         <th>Lowest Fare Carrier Fare</th>
+                        <th>Daily Passengers</th>
                         <th>Miles</th>
                         <th>Year</th>
                         <th>Quarter</th>
@@ -315,6 +316,7 @@ function TableOfData(props) {
                             </td>
                             {/* <td>{item.fare_low}</td> */}
                             <td>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(Number(parseFloat(item.fare_low).toFixed(0)))}</td>
+                            <td>{(parseFloat(item.passengers).toFixed(0))}</td>
                             <td>{item.nsmiles}</td>
                             <td>{item.year}</td>
                             <td>{item.quarter}</td>
