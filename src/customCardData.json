@@ -5,7 +5,7 @@
         "centurion_access": true,
         "capital_one_access": false,
         "priority_pass_access": true,
-        "SUB_value": 1500,
+        "SUB_value": 1800,
         "annual_fee": 695,
         "compatible_airlines": [
             {
@@ -56,7 +56,7 @@
         "centurion_access": false,
         "capital_one_access": false,
         "priority_pass_access": false,
-        "SUB_value": 700,
+        "SUB_value": 840,
         "annual_fee": 95,
         "compatible_airlines": [
             {
@@ -148,12 +148,63 @@
         ]
     },
     {
+        "name": "Capital One Venture",
+        "global_entry": true,
+        "centurion_access": false,
+        "capital_one_access": false,
+        "priority_pass_access": true,
+        "SUB_value": 750,
+        "annual_fee": 95,
+        "compatible_airlines": [
+            {
+                "airline_name": "Delta",
+                "compatibility_score": 50,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "JetBlue",
+                "compatibility_score": 50,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "American",
+                "compatibility_score": 50,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "United",
+                "compatibility_score": 50,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "Alaska",
+                "compatibility_score": 50,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            }
+        ]
+    },
+    {
         "name": "Chase Sapphire Reserve",
         "global_entry": true,
         "centurion_access": false,
         "capital_one_access": false,
         "priority_pass_access": true,
-        "SUB_value": 900,
+        "SUB_value": 1200,
         "annual_fee": 550,
         "compatible_airlines": [
             {
@@ -198,6 +249,84 @@
             },
             {
                 "airline_name": "Southwest",
+                "compatibility_score": 100,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            }
+        ]
+    },
+    {
+        "name": "Chase Sapphire Preferred",
+        "global_entry": false,
+        "centurion_access": false,
+        "capital_one_access": false,
+        "priority_pass_access": false,
+        "SUB_value": 750,
+        "annual_fee": 95,
+        "compatible_airlines": [
+            {
+                "airline_name": "Delta",
+                "compatibility_score": 50,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "JetBlue",
+                "compatibility_score": 100,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "American",
+                "compatibility_score": 50,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "United",
+                "compatibility_score": 100,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "Alaska",
+                "compatibility_score": 50,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            },
+            {
+                "airline_name": "Southwest",
+                "compatibility_score": 100,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            }
+        ]
+    },
+    {
+        "name": "Citi Premier",
+        "global_entry": false,
+        "centurion_access": false,
+        "capital_one_access": false,
+        "priority_pass_access": true,
+        "SUB_value": 600,
+        "annual_fee": 95,
+        "compatible_airlines": [
+            {
+                "airline_name": "JetBlue",
                 "compatibility_score": 100,
                 "free_bag": false,
                 "buddy_ticket": false,
