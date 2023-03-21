@@ -68,6 +68,7 @@ class Insights extends Component {
             "Avelo": "",
             "Amex": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
             "The Platinum Card from AMEX": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
+            "The Gold Card from AMEX": "https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/product/images/img-WEBLOGO1-01.jpg",
             "Chase Sapphire Reserve": "https://1000logos.net/wp-content/uploads/2016/11/Shape-of-the-Chase-logo-500x311.jpg",
             "Capital One Venture X": "https://i.imgur.com/cV2k8tb.png",
             "Capital One Venture": "https://i.imgur.com/cV2k8tb.png",
