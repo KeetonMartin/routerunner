@@ -73,7 +73,7 @@ class Insights extends Component {
             "Capital One Venture": "https://i.imgur.com/cV2k8tb.png",
             "Alaska Airlines Visa Signature": "https://yt3.ggpht.com/ytc/AMLnZu-C-uN4bIkAAPybtvT92uFskxUC76aU_JFD05Rpxg=s900-c-k-c0x00ffffff-no-rj",
             "United Explorer Card": "https://i.imgur.com/jiyBO1D.jpg",
-            "Virgin America": "https://download.logo.wine/logo/Virgin_America/Virgin_America-Logo.wine.png",
+            "Virgin America": "https://i.imgur.com/LyHGV0f.png",
             "AirTran": "https://1000logos.net/wp-content/uploads/2020/03/AirTran-Airways-Logo.jpg",
             "Chase Sapphire Preferred": "https://1000logos.net/wp-content/uploads/2016/11/Shape-of-the-Chase-logo-500x311.jpg",
         }
@@ -94,7 +94,8 @@ class Insights extends Component {
             "Avelo": "",
             "Chase Sapphire Reserve": "https://i.imgur.com/VHVqbUk.png",
             "Amex": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/Data/SVG/dls/worldservice-tile-brightblue.svg",
-            "The Platinum Card from AMEX": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/Data/SVG/dls/worldservice-tile-brightblue.svg",
+            "The Platinum Card from AMEX": "https://i.imgur.com/VkzDPa8.jpg",
+            "The Gold Card from AMEX": "https://i.imgur.com/9iKqKZg.jpg",
             "Capital One Venture X": "https://i.imgur.com/7DXlJOH.jpg",
             "Capital One Venture": "https://i.imgur.com/7DXlJOH.jpg",
             "United Explorer Card": "https://i.imgur.com/hV3cZpS.jpg",
