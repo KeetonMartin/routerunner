@@ -143,7 +143,6 @@ function LocationPicker(props) {
       : locations.filter((location) =>
         location.name
           .toLowerCase()
-          .replace(/\s+/g, '')
           .includes(query.toLowerCase().replace(/\s+/g, ''))
       )
 
