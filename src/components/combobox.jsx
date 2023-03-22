@@ -178,6 +178,7 @@ function LocationPicker(props) {
               className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-base-content focus:ring-0"
               displayValue={(location) => location.name}
               onChange={(event) => setQuery(event.target.value)}
+              autocomplete="off"
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon
