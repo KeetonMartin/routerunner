@@ -197,7 +197,7 @@ function TableOfData(props) {
     const selectedAirport1 = useSelector((state) => state.selections.selectedAirport1);
     const selectedAirport2 = useSelector((state) => state.selections.selectedAirport2);
 
-    const { toggleSwitch, logos, airlineCodes} = props
+    const { toggleSwitch, logos, airlineCodes} = props;
 
     useEffect(() => {
         async function fetchData() {
@@ -224,7 +224,7 @@ function TableOfData(props) {
 
         }
         fetchData();
-    }, [selectedCity1, selectedCity2]);
+    }, [selectedCity1, selectedCity2, toggleSwitch]);
 
     const columns = [
         {
@@ -307,7 +307,7 @@ function TableOfData(props) {
                             <td>
                                 <div className="avatar">
                                     <div className="mask mask-squircle w-12 h-12">
-                                        <img src={props.logos[props.airlineCodes[item.carrier_lg]]} alt={item.carrier_lg} />
+                                        <img src={logos[airlineCodes[item.carrier_lg]]} alt={item.carrier_lg} />
                                         {/* <img src={require("../assets/unitedLogo.jpg")} alt={item.carrier_lg} /> */}
                                     </div>
                                 </div>
@@ -316,7 +316,7 @@ function TableOfData(props) {
                             <td>
                                 <div className="avatar">
                                     <div className="mask mask-squircle w-12 h-12">
-                                        <img src={props.logos[props.airlineCodes[item.carrier_low]]} alt={item.carrier_low} />
+                                        <img src={logos[airlineCodes[item.carrier_low]]} alt={item.carrier_low} />
                                         {/* <img src={require("../assets/unitedLogo.jpg")} alt={item.carrier_lg} /> */}
                                     </div>
                                 </div>
