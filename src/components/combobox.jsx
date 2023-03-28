@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { connect } from "react-redux";
 import { setSelectedCity1, setSelectedCity2, setSelectedAirport1, setSelectedAirport2 } from '../features/selectionsSlice'
-
+import customAirportData from "../customAirportData.json";
 
 
 
@@ -109,17 +109,18 @@ const cities = [
   { id: 96, cityId: 34689, name: "Santa Barbara, CA" }
 ]
 
-const airports = [
-  { id: 1, name: 'SFO' },
-  { id: 2, name: 'JFK' },
-  { id: 3, name: 'LAX' },
-  { id: 4, name: 'ORD' },
-  { id: 5, name: 'DFW' },
-  { id: 6, name: 'DEN' },
-  { id: 7, name: 'ATL' },
-  { id: 8, name: 'CLT' },
-  { id: 9, name: 'IAH' },
-]
+// const airports = [
+//   { id: 1, name: 'SFO' },
+//   { id: 2, name: 'JFK' },
+//   { id: 3, name: 'LAX' },
+//   { id: 4, name: 'ORD' },
+//   { id: 5, name: 'DFW' },
+//   { id: 6, name: 'DEN' },
+//   { id: 7, name: 'ATL' },
+//   { id: 8, name: 'CLT' },
+//   { id: 9, name: 'IAH' },
+// ]
+const airports = customAirportData;
 
 function LocationPicker(props) {
 

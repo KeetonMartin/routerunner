@@ -21,9 +21,14 @@ const CardContainer = (props) => {
     const displayingCitiesInsights = useSelector((state) => state.insights.cityMode)
 
     let modedParams = null;
+    let dataURL = null;
     
     if (displayingCitiesInsights) {
+        dataURL = `https://data.transportation.gov/resource/4f3n-jbg2.json`
         modedParams = {         $where: '(citymarketid_1 = ' + selectedCity1 + ' AND citymarketid_2 = ' + selectedCity2 + ') OR (citymarketid_1 = ' + selectedCity2 + ' AND citymarketid_2 = ' + selectedCity1 + ')'}
+    } else if (displayingAirportsInsights) {
+        dataURL = `https://data.transportation.gov/resource/tfrh-tu9e.json`
+        modedParams = {         $where: '(airport_1 = ' + selectedAirport1 + ' AND airport_2 = ' + selectedAirport2 + ') OR (airport_1 = ' + selectedAirport2 + ' AND airport_2 = ' + selectedAirport1 + ')'}
     }
 
     if (!props.airlineCodes) {
@@ -43,14 +48,14 @@ const CardContainer = (props) => {
                     // order: "passengers DESC",
                     // app_token: "Qto9G2rlKlEYzT0U1Kb6RzJLj"
                 }
-                const response = await axios.get(`https://data.transportation.gov/resource/4f3n-jbg2.json`, { params })
+                const response = await axios.get(dataURL, { modedParams })
                 setData(response.data)
             } catch (e) {
                 console.log(e);
             }
         }
         fetchData();
-    }, [selectedCity1, selectedCity2]);
+    }, [dataURL, modedParams, selectedCity1, selectedCity2, selectedAirport1, selectedAirport2]);
 
     let routeData = data;
 

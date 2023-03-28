@@ -1,0 +1,937 @@
+[
+    {
+        "name": "CLT",
+        "airportId": "11057",
+        "id": 0
+    },
+    {
+        "name": "ORD",
+        "airportId": "13930",
+        "id": 1
+    },
+    {
+        "name": "BUR",
+        "airportId": "10800",
+        "id": 2
+    },
+    {
+        "name": "BOS",
+        "airportId": "10721",
+        "id": 3
+    },
+    {
+        "name": "PHX",
+        "airportId": "14107",
+        "id": 4
+    },
+    {
+        "name": "DEN",
+        "airportId": "11292",
+        "id": 5
+    },
+    {
+        "name": "LAX",
+        "airportId": "12892",
+        "id": 6
+    },
+    {
+        "name": "SNA",
+        "airportId": "14908",
+        "id": 7
+    },
+    {
+        "name": "MDW",
+        "airportId": "13232",
+        "id": 8
+    },
+    {
+        "name": "DFW",
+        "airportId": "11298",
+        "id": 9
+    },
+    {
+        "name": "MSP",
+        "airportId": "13487",
+        "id": 10
+    },
+    {
+        "name": "PHL",
+        "airportId": "14100",
+        "id": 11
+    },
+    {
+        "name": "IAH",
+        "airportId": "12266",
+        "id": 12
+    },
+    {
+        "name": "RSW",
+        "airportId": "14635",
+        "id": 13
+    },
+    {
+        "name": "DAL",
+        "airportId": "11259",
+        "id": 14
+    },
+    {
+        "name": "ONT",
+        "airportId": "13891",
+        "id": 15
+    },
+    {
+        "name": "PVD",
+        "airportId": "14307",
+        "id": 16
+    },
+    {
+        "name": "JFK",
+        "airportId": "12478",
+        "id": 17
+    },
+    {
+        "name": "LGB",
+        "airportId": "12954",
+        "id": 18
+    },
+    {
+        "name": "ATL",
+        "airportId": "10397",
+        "id": 19
+    },
+    {
+        "name": "EWR",
+        "airportId": "11618",
+        "id": 20
+    },
+    {
+        "name": "LAS",
+        "airportId": "12889",
+        "id": 21
+    },
+    {
+        "name": "DTW",
+        "airportId": "11433",
+        "id": 22
+    },
+    {
+        "name": "LGA",
+        "airportId": "12953",
+        "id": 23
+    },
+    {
+        "name": "MCO",
+        "airportId": "13204",
+        "id": 24
+    },
+    {
+        "name": "HOU",
+        "airportId": "12191",
+        "id": 25
+    },
+    {
+        "name": "AUS",
+        "airportId": "10423",
+        "id": 26
+    },
+    {
+        "name": "ISP",
+        "airportId": "12391",
+        "id": 27
+    },
+    {
+        "name": "MIA",
+        "airportId": "13303",
+        "id": 28
+    },
+    {
+        "name": "SFO",
+        "airportId": "14771",
+        "id": 29
+    },
+    {
+        "name": "BNA",
+        "airportId": "10693",
+        "id": 30
+    },
+    {
+        "name": "HPN",
+        "airportId": "12197",
+        "id": 31
+    },
+    {
+        "name": "CLE",
+        "airportId": "11042",
+        "id": 32
+    },
+    {
+        "name": "SAN",
+        "airportId": "14679",
+        "id": 33
+    },
+    {
+        "name": "SLC",
+        "airportId": "14869",
+        "id": 34
+    },
+    {
+        "name": "PDX",
+        "airportId": "14057",
+        "id": 35
+    },
+    {
+        "name": "MHT",
+        "airportId": "13296",
+        "id": 36
+    },
+    {
+        "name": "MCI",
+        "airportId": "13198",
+        "id": 37
+    },
+    {
+        "name": "FLL",
+        "airportId": "11697",
+        "id": 38
+    },
+    {
+        "name": "ABQ",
+        "airportId": "10140",
+        "id": 39
+    },
+    {
+        "name": "BDL",
+        "airportId": "10529",
+        "id": 40
+    },
+    {
+        "name": "SMF",
+        "airportId": "14893",
+        "id": 41
+    },
+    {
+        "name": "SYR",
+        "airportId": "15096",
+        "id": 42
+    },
+    {
+        "name": "CHS",
+        "airportId": "10994",
+        "id": 43
+    },
+    {
+        "name": "BUF",
+        "airportId": "10792",
+        "id": 44
+    },
+    {
+        "name": "SDF",
+        "airportId": "14730",
+        "id": 45
+    },
+    {
+        "name": "DSM",
+        "airportId": "11423",
+        "id": 46
+    },
+    {
+        "name": "ORF",
+        "airportId": "13931",
+        "id": 47
+    },
+    {
+        "name": "GSO",
+        "airportId": "11995",
+        "id": 48
+    },
+    {
+        "name": "SAT",
+        "airportId": "14683",
+        "id": 49
+    },
+    {
+        "name": "CMH",
+        "airportId": "11066",
+        "id": 50
+    },
+    {
+        "name": "CVG",
+        "airportId": "11193",
+        "id": 51
+    },
+    {
+        "name": "COS",
+        "airportId": "11109",
+        "id": 52
+    },
+    {
+        "name": "SJC",
+        "airportId": "14831",
+        "id": 53
+    },
+    {
+        "name": "ELP",
+        "airportId": "11540",
+        "id": 54
+    },
+    {
+        "name": "OAK",
+        "airportId": "13796",
+        "id": 55
+    },
+    {
+        "name": "ALB",
+        "airportId": "10257",
+        "id": 56
+    },
+    {
+        "name": "MSY",
+        "airportId": "13495",
+        "id": 57
+    },
+    {
+        "name": "MSN",
+        "airportId": "13485",
+        "id": 58
+    },
+    {
+        "name": "RNO",
+        "airportId": "14570",
+        "id": 59
+    },
+    {
+        "name": "JAX",
+        "airportId": "12451",
+        "id": 60
+    },
+    {
+        "name": "AMA",
+        "airportId": "10279",
+        "id": 61
+    },
+    {
+        "name": "OMA",
+        "airportId": "13871",
+        "id": 62
+    },
+    {
+        "name": "TUS",
+        "airportId": "15376",
+        "id": 63
+    },
+    {
+        "name": "IND",
+        "airportId": "12339",
+        "id": 64
+    },
+    {
+        "name": "PNS",
+        "airportId": "14193",
+        "id": 65
+    },
+    {
+        "name": "OKC",
+        "airportId": "13851",
+        "id": 66
+    },
+    {
+        "name": "EUG",
+        "airportId": "11603",
+        "id": 67
+    },
+    {
+        "name": "CAE",
+        "airportId": "10868",
+        "id": 68
+    },
+    {
+        "name": "BOI",
+        "airportId": "10713",
+        "id": 69
+    },
+    {
+        "name": "BLI",
+        "airportId": "10666",
+        "id": 70
+    },
+    {
+        "name": "GRR",
+        "airportId": "11986",
+        "id": 71
+    },
+    {
+        "name": "ROC",
+        "airportId": "14576",
+        "id": 72
+    },
+    {
+        "name": "SAV",
+        "airportId": "14685",
+        "id": 73
+    },
+    {
+        "name": "MYR",
+        "airportId": "13577",
+        "id": 74
+    },
+    {
+        "name": "TYS",
+        "airportId": "15412",
+        "id": 75
+    },
+    {
+        "name": "RDU",
+        "airportId": "14492",
+        "id": 76
+    },
+    {
+        "name": "DAY",
+        "airportId": "11267",
+        "id": 77
+    },
+    {
+        "name": "STL",
+        "airportId": "15016",
+        "id": 78
+    },
+    {
+        "name": "SRQ",
+        "airportId": "14986",
+        "id": 79
+    },
+    {
+        "name": "PIT",
+        "airportId": "14122",
+        "id": 80
+    },
+    {
+        "name": "GSP",
+        "airportId": "11996",
+        "id": 81
+    },
+    {
+        "name": "AZA",
+        "airportId": "10466",
+        "id": 82
+    },
+    {
+        "name": "BHM",
+        "airportId": "10599",
+        "id": 83
+    },
+    {
+        "name": "XNA",
+        "airportId": "15919",
+        "id": 84
+    },
+    {
+        "name": "MSO",
+        "airportId": "13486",
+        "id": 85
+    },
+    {
+        "name": "MEM",
+        "airportId": "13244",
+        "id": 86
+    },
+    {
+        "name": "PWM",
+        "airportId": "14321",
+        "id": 87
+    },
+    {
+        "name": "CID",
+        "airportId": "11003",
+        "id": 88
+    },
+    {
+        "name": "BTV",
+        "airportId": "10785",
+        "id": 89
+    },
+    {
+        "name": "SWF",
+        "airportId": "15070",
+        "id": 90
+    },
+    {
+        "name": "TUL",
+        "airportId": "15370",
+        "id": 91
+    },
+    {
+        "name": "GEG",
+        "airportId": "11884",
+        "id": 92
+    },
+    {
+        "name": "LIT",
+        "airportId": "12992",
+        "id": 93
+    },
+    {
+        "name": "TLH",
+        "airportId": "15249",
+        "id": 94
+    },
+    {
+        "name": "CAK",
+        "airportId": "10874",
+        "id": 95
+    },
+    {
+        "name": "EYW",
+        "airportId": "11624",
+        "id": 96
+    },
+    {
+        "name": "EGE",
+        "airportId": "11503",
+        "id": 97
+    },
+    {
+        "name": "MKE",
+        "airportId": "13342",
+        "id": 98
+    },
+    {
+        "name": "SEA",
+        "airportId": "14747",
+        "id": 99
+    },
+    {
+        "name": "AVL",
+        "airportId": "10431",
+        "id": 100
+    },
+    {
+        "name": "CRP",
+        "airportId": "11140",
+        "id": 101
+    },
+    {
+        "name": "HSV",
+        "airportId": "12217",
+        "id": 102
+    },
+    {
+        "name": "LEX",
+        "airportId": "12945",
+        "id": 103
+    },
+    {
+        "name": "ASE",
+        "airportId": "10372",
+        "id": 104
+    },
+    {
+        "name": "DET",
+        "airportId": "11295",
+        "id": 105
+    },
+    {
+        "name": "PSP",
+        "airportId": "14262",
+        "id": 106
+    },
+    {
+        "name": "AUS",
+        "airportId": "16440",
+        "id": 107
+    },
+    {
+        "name": "TPA",
+        "airportId": "15304",
+        "id": 108
+    },
+    {
+        "name": "PHF",
+        "airportId": "14098",
+        "id": 109
+    },
+    {
+        "name": "BZN",
+        "airportId": "10849",
+        "id": 110
+    },
+    {
+        "name": "BIL",
+        "airportId": "10620",
+        "id": 111
+    },
+    {
+        "name": "ACK",
+        "airportId": "10154",
+        "id": 112
+    },
+    {
+        "name": "JAC",
+        "airportId": "12441",
+        "id": 113
+    },
+    {
+        "name": "FAT",
+        "airportId": "11638",
+        "id": 114
+    },
+    {
+        "name": "DCA",
+        "airportId": "11278",
+        "id": 115
+    },
+    {
+        "name": "VPS",
+        "airportId": "15624",
+        "id": 116
+    },
+    {
+        "name": "PIA",
+        "airportId": "14108",
+        "id": 117
+    },
+    {
+        "name": "BTR",
+        "airportId": "10781",
+        "id": 118
+    },
+    {
+        "name": "ACY",
+        "airportId": "10158",
+        "id": 119
+    },
+    {
+        "name": "PAE",
+        "airportId": "14004",
+        "id": 120
+    },
+    {
+        "name": "SBN",
+        "airportId": "14696",
+        "id": 121
+    },
+    {
+        "name": "RDM",
+        "airportId": "14489",
+        "id": 122
+    },
+    {
+        "name": "ECP",
+        "airportId": "11481",
+        "id": 123
+    },
+    {
+        "name": "FNT",
+        "airportId": "11721",
+        "id": 124
+    },
+    {
+        "name": "JAN",
+        "airportId": "12448",
+        "id": 125
+    },
+    {
+        "name": "DAB",
+        "airportId": "11252",
+        "id": 126
+    },
+    {
+        "name": "LCK",
+        "airportId": "12917",
+        "id": 127
+    },
+    {
+        "name": "BGR",
+        "airportId": "10581",
+        "id": 128
+    },
+    {
+        "name": "MDT",
+        "airportId": "13230",
+        "id": 129
+    },
+    {
+        "name": "BIS",
+        "airportId": "10627",
+        "id": 130
+    },
+    {
+        "name": "MVY",
+        "airportId": "13541",
+        "id": 131
+    },
+    {
+        "name": "EFD",
+        "airportId": "11495",
+        "id": 132
+    },
+    {
+        "name": "CGX",
+        "airportId": "10977",
+        "id": 133
+    },
+    {
+        "name": "PSC",
+        "airportId": "14252",
+        "id": 134
+    },
+    {
+        "name": "GPT",
+        "airportId": "11973",
+        "id": 135
+    },
+    {
+        "name": "CHI",
+        "airportId": "10986",
+        "id": 136
+    },
+    {
+        "name": "HRL",
+        "airportId": "12206",
+        "id": 137
+    },
+    {
+        "name": "GFK",
+        "airportId": "11898",
+        "id": 138
+    },
+    {
+        "name": "NYC",
+        "airportId": "13784",
+        "id": 139
+    },
+    {
+        "name": "MLB",
+        "airportId": "13360",
+        "id": 140
+    },
+    {
+        "name": "MOB",
+        "airportId": "13422",
+        "id": 141
+    },
+    {
+        "name": "FCA",
+        "airportId": "11648",
+        "id": 142
+    },
+    {
+        "name": "RIC",
+        "airportId": "14524",
+        "id": 143
+    },
+    {
+        "name": "DTT",
+        "airportId": "11432",
+        "id": 144
+    },
+    {
+        "name": "FAR",
+        "airportId": "11637",
+        "id": 145
+    },
+    {
+        "name": "IAD",
+        "airportId": "12264",
+        "id": 146
+    },
+    {
+        "name": "MOT",
+        "airportId": "13433",
+        "id": 147
+    },
+    {
+        "name": "FWA",
+        "airportId": "11823",
+        "id": 148
+    },
+    {
+        "name": "ATW",
+        "airportId": "10408",
+        "id": 149
+    },
+    {
+        "name": "IDA",
+        "airportId": "12280",
+        "id": 150
+    },
+    {
+        "name": "BWI",
+        "airportId": "10821",
+        "id": 151
+    },
+    {
+        "name": "AGS",
+        "airportId": "10208",
+        "id": 152
+    },
+    {
+        "name": "PIE",
+        "airportId": "14112",
+        "id": 153
+    },
+    {
+        "name": "SGF",
+        "airportId": "14783",
+        "id": 154
+    },
+    {
+        "name": "WAS",
+        "airportId": "15715",
+        "id": 155
+    },
+    {
+        "name": "CHA",
+        "airportId": "10980",
+        "id": 156
+    },
+    {
+        "name": "MFR",
+        "airportId": "13264",
+        "id": 157
+    },
+    {
+        "name": "FMY",
+        "airportId": "11714",
+        "id": 158
+    },
+    {
+        "name": "LAN",
+        "airportId": "12884",
+        "id": 159
+    },
+    {
+        "name": "GYY",
+        "airportId": "12055",
+        "id": 160
+    },
+    {
+        "name": "MGM",
+        "airportId": "13277",
+        "id": 161
+    },
+    {
+        "name": "ACV",
+        "airportId": "10157",
+        "id": 162
+    },
+    {
+        "name": "FSD",
+        "airportId": "11775",
+        "id": 163
+    },
+    {
+        "name": "ABE",
+        "airportId": "10135",
+        "id": 164
+    },
+    {
+        "name": "HHH",
+        "airportId": "12124",
+        "id": 165
+    },
+    {
+        "name": "AIY",
+        "airportId": "10227",
+        "id": 166
+    },
+    {
+        "name": "HTS",
+        "airportId": "12223",
+        "id": 167
+    },
+    {
+        "name": "USA",
+        "airportId": "12544",
+        "id": 168
+    },
+    {
+        "name": "BLV",
+        "airportId": "10676",
+        "id": 169
+    },
+    {
+        "name": "LBE",
+        "airportId": "12898",
+        "id": 170
+    },
+    {
+        "name": "WHR",
+        "airportId": "15758",
+        "id": 171
+    },
+    {
+        "name": "CHO",
+        "airportId": "10990",
+        "id": 172
+    },
+    {
+        "name": "FTW",
+        "airportId": "11789",
+        "id": 173
+    },
+    {
+        "name": "FNL",
+        "airportId": "11719",
+        "id": 174
+    },
+    {
+        "name": "BMI",
+        "airportId": "10685",
+        "id": 175
+    },
+    {
+        "name": "BHC",
+        "airportId": "10590",
+        "id": 176
+    },
+    {
+        "name": "ORL",
+        "airportId": "13936",
+        "id": 177
+    },
+    {
+        "name": "MKC",
+        "airportId": "13341",
+        "id": 178
+    },
+    {
+        "name": "SAC",
+        "airportId": "14672",
+        "id": 179
+    },
+    {
+        "name": "TSS",
+        "airportId": "15346",
+        "id": 180
+    },
+    {
+        "name": "JRB",
+        "airportId": "12546",
+        "id": 181
+    },
+    {
+        "name": "MPB",
+        "airportId": "13439",
+        "id": 182
+    },
+    {
+        "name": "HFD",
+        "airportId": "12108",
+        "id": 183
+    },
+    {
+        "name": "STP",
+        "airportId": "15020",
+        "id": 184
+    },
+    {
+        "name": "VGT",
+        "airportId": "15589",
+        "id": 185
+    },
+    {
+        "name": "FYV",
+        "airportId": "11834",
+        "id": 186
+    }
+]
