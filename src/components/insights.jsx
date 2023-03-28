@@ -113,12 +113,12 @@ class Insights extends Component {
                         <div className="hero-content mx-auto max-w-md text-center md:max-w-full">
                             <div className="max-w-full space-y-4 py-8">
                                 <InsightsHeading />
-                                <hr className="my-4" />
-                                <div className="loadingContainer flex items-center justify-center h-16">
+                                <div className="loadingContainer flex items-center justify-center ">
                                     {this.state.loading ? (
-                                        <Progress className="w-56" />
+                                        <Progress className="w-56 h-2" />
                                     ) : null}
                                 </div>
+                                <hr className="my-4" />
                                 <CardContainer airlineCodes={airlineCodes} logos={logos} splashArts={splashArts}/>
                                 <TableOfData toggleSwitch={this.toggleLoader} airlineCodes={airlineCodes} logos={logos}  />
 
@@ -197,9 +197,11 @@ function TableOfData(props) {
     const selectedAirport1 = useSelector((state) => state.selections.selectedAirport1);
     const selectedAirport2 = useSelector((state) => state.selections.selectedAirport2);
 
+    const { toggleSwitch, logos, airlineCodes} = props
+
     useEffect(() => {
         async function fetchData() {
-            props.toggleSwitch()
+            toggleSwitch()
 
             try {
                 const params = {
@@ -218,7 +220,7 @@ function TableOfData(props) {
             }
 
             await timeout(1000); //for 1 sec delay
-            props.toggleSwitch()
+            toggleSwitch()
 
         }
         fetchData();

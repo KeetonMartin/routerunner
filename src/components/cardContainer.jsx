@@ -17,6 +17,15 @@ const CardContainer = (props) => {
     const selectedAirport1 = useSelector((state) => state.selections.selectedAirport1);
     const selectedAirport2 = useSelector((state) => state.selections.selectedAirport2);
 
+    const displayingAirportsInsights = useSelector((state) => state.insights.airportMode)
+    const displayingCitiesInsights = useSelector((state) => state.insights.cityMode)
+
+    let modedParams = null;
+    
+    if (displayingCitiesInsights) {
+        modedParams = {         $where: '(citymarketid_1 = ' + selectedCity1 + ' AND citymarketid_2 = ' + selectedCity2 + ') OR (citymarketid_1 = ' + selectedCity2 + ' AND citymarketid_2 = ' + selectedCity1 + ')'}
+    }
+
     if (!props.airlineCodes) {
         console.warn("Airline codes not coming through")
     }
