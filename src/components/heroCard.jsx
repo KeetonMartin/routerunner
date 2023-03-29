@@ -3,6 +3,7 @@ import LocationPicker from './combobox'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { enableAirportMode, enableCityMode } from '../features/insightsSlice'
+import './query-builder.css'
 
 class QueryBuilder extends React.Component {
     constructor(props) {
@@ -10,7 +11,13 @@ class QueryBuilder extends React.Component {
         this.handleClick.bind(this);
         this.setStateToAirportMode.bind(this);
         this.setStateToCityMode.bind(this);
+        this.state = { isVisible: false };
+    }
 
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ isVisible: true });
+        }, 800);
     }
 
     setStateToAirportMode = () => {
@@ -45,8 +52,9 @@ class QueryBuilder extends React.Component {
     }
 
     render() {
+        const { isVisible } = this.state;
         return (
-            <Card className="rounded-xl w-96 bg-primary text-primary-content flex-auto justify-center items-center ">
+            <Card className={`rounded-xl w-96 bg-primary text-primary-content flex-auto justify-center items-center ${isVisible ? 'fade-in' : ''}`}>
                 <Card.Body className='space-y-4'>
                     <Form className='space-y-4 px-8 py-5'>
                         <h1 className='card-title'>{this.props.cardTitle}</h1>

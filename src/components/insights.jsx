@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { setSelectedAirport1 } from "../features/selectionsSlice";
 import { Button, Progress } from 'react-daisyui'
 import CardContainer from './cardContainer';
+import './insights.css';
 
 class Insights extends Component {
     constructor(props) {
@@ -111,7 +112,7 @@ class Insights extends Component {
                 <div>
                     <div className="hero from-primary to-accent text-primary-content min-h-min bg-gradient-to-r">
                         <div className="hero-content mx-auto max-w-md text-center md:max-w-full">
-                            <div className="max-w-full space-y-4 py-8">
+                            <div className="all-insights max-w-full space-y-4 py-8">
                                 <InsightsHeading />
                                 <hr className="my-4" />
                                 <div className="loadingContainer flex items-center justify-center h-16">

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import QueryBuilder from './heroCard'
+import WelcomeMessage from './welcomeMessage';
 
 class RouteRunnerHero extends Component {
 
@@ -40,9 +41,11 @@ class RouteRunnerHero extends Component {
                     <div className="hero-content text-center text-primary-content">
                         <div className="max-w-full space-y-4 py-8">
 
-                            <h1 className='text-5xl font-bold'>Welcome to RouteRunner</h1>
+                            {/* <h1 className='text-5xl font-bold'>Welcome to RouteRunner</h1>
                             <p className="py-6">You tell us which city-pair you fly the most, we'll tell you which credit
-                                card to get to optimize your points or miles.</p>
+                                card to get to optimize your points or miles.</p> */}
+                            <WelcomeMessage />
+
 
                             <div class="grid gap-4 grid-cols-1 md:grid-cols-1 lg:grid-cols-3 place-items-center">
                                 <QueryBuilder
