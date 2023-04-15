@@ -6,9 +6,6 @@ import { useDispatch } from 'react-redux';
 import { connect } from "react-redux";
 import { setSelectedCity1, setSelectedCity2, setSelectedAirport1, setSelectedAirport2 } from '../features/selectionsSlice'
 
-
-
-
 const cities = [
   { id: 0, cityId: 32467, name: "Miami, FL (Metropolitan Area)" },
   { id: 1, cityId: 32575, name: "Los Angeles, CA (Metropolitan Area)" },
@@ -137,14 +134,11 @@ function LocationPicker(props) {
   // [selected, setSelected] = useState(locations[Math.floor(Math.random() * 5)])
 
 
-  const filteredLocations =
-    query === ''
-      ? locations
-      : locations.filter((location) =>
-        location.name
-          .toLowerCase()
-          .includes(query.toLowerCase().replace(/\s+/g, ''))
-      )
+const filteredLocations = query === ''
+  ? locations
+  : locations.filter((location) =>
+      location.name.toLowerCase().includes(query.trim().toLowerCase())
+  );
 
   useEffect(() => {
     // Dispatch an action with the selected value from the component's state
