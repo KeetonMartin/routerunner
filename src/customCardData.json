@@ -107,7 +107,7 @@
         "centurion_access": false,
         "capital_one_access": false,
         "priority_pass_access": false,
-        "SUB_value": 840,
+        "SUB_value": 940,
         "annual_fee": 95,
         "compatible_airlines": [
             {
@@ -134,7 +134,7 @@
         "centurion_access": false,
         "capital_one_access": false,
         "priority_pass_access": false,
-        "SUB_value": 600,
+        "SUB_value": 720,
         "annual_fee": 95,
         "compatible_airlines": [
             {
