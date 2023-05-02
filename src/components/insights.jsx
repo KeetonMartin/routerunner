@@ -124,7 +124,6 @@ class Insights extends Component {
                                 </div>
                                 <CardContainer airlineCodes={airlineCodes} logos={logos} splashArts={splashArts}/>
                                 <TableOfData toggleSwitch={this.toggleLoader} airlineCodes={airlineCodes} logos={logos}  />
-
                             </div>
                         </div>
                     </div>
