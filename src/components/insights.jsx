@@ -112,7 +112,7 @@ class Insights extends Component {
         return (
             <div>
                 <div>
-                    <div className="hero from-primary to-accent text-primary-content min-h-min bg-gradient-to-r">
+                    <div className="hero from-base-200 to-base-300 text-primary-content min-h-min bg-gradient-to-r">
                         <div className="hero-content mx-auto max-w-md text-center md:max-w-full">
                             <div className="all-insights max-w-full space-y-4 py-8">
                                 <InsightsHeading />

@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <Router>
         <div className="flex flex-col justify-between h-screen">
-          <Theme dataTheme='black'>
+          <Theme dataTheme='business'>
             <Navbar />
             <RouteRunnerHero
               setStateToAirportMode={this.setStateToAirportMode}

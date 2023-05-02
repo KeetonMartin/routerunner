@@ -1,6 +1,7 @@
 [
     {
         "name": "The Platinum Card from AMEX",
+        "application_link":"something",
         "global_entry": true,
         "centurion_access": true,
         "capital_one_access": false,
