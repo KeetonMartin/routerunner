@@ -15,7 +15,9 @@ class InsightsRecommendation extends Component {
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
           {badges}
-          <div className="flex justify-between items-center"> {/* add justify-between class */}
+          <div className="flex justify-between items-center">
+            {" "}
+            {/* add justify-between class */}
             <div className="avatar mr-4">
               <div className="mask mask-squircle w-12 h-12">
                 <img src={logo} alt={title} />
@@ -25,7 +27,13 @@ class InsightsRecommendation extends Component {
             {customCardData.find(
               (data) => data.name === title && data.application_link
             ) ? (
-              <button className="btn btn-accent ml-auto">APPLy</button>
+              <a
+                href={customCardData.find((data) => data.name === title).application_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btn btn-accent ml-auto">Apply</button>
+              </a>
             ) : null}
           </div>
         </div>

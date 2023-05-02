@@ -1,7 +1,7 @@
 [
     {
         "name": "The Platinum Card from AMEX",
-        "application_link":"something",
+        "application_link":"https://americanexpress.com/en-us/referral/KEETOMWKTY?xl=cp15",
         "global_entry": true,
         "centurion_access": true,
         "capital_one_access": false,
@@ -53,6 +53,7 @@
     },
     {
         "name": "The Gold Card from AMEX",
+        "application_link":"https://americanexpress.com/en-us/referral/KEETOMHlUo?xl=cp15",
         "global_entry": false,
         "centurion_access": false,
         "capital_one_access": false,
