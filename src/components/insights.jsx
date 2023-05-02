@@ -56,6 +56,7 @@ class Insights extends Component {
         let logos = {
             "Silver": "",
             "American": "https://i.pinimg.com/originals/a2/61/08/a26108757d054158beb1157275db8649.jpg",
+            "Citi AAdvantage Platinum Card": "https://i.pinimg.com/originals/a2/61/08/a26108757d054158beb1157275db8649.jpg",
             "Alaska": "https://i.imgur.com/k5pNbUr.png",
             "JetBlue": "https://www.jetblue.com/magnoliapublic/dam/ui-assets/imagery/info-assets/logos-misc/JetBlue-og-image.jpg",
             "Delta": "https://img.favpng.com/19/9/1/delta-air-lines-image-computer-icons-logo-vector-graphics-png-favpng-s1SBMZREacvE4Fcibx79aKRCy.jpg",
@@ -104,7 +105,8 @@ class Insights extends Component {
             "Alaska Airlines Visa Signature": "https://i.imgur.com/qEAgrOl.jpg",
             "Sun Country": "https://i.imgur.com/twyG8g4.png",
             "Frontier": "https://i.imgur.com/CLGYz4w.png",
-            "Chase Sapphire Preferred": "https://i.imgur.com/VHVqbUk.png"
+            "Chase Sapphire Preferred": "https://i.imgur.com/VHVqbUk.png",
+            "Citi AAdvantage Platinum Card": "https://i.imgur.com/pNCbaIP.png"
         }
 
         return (

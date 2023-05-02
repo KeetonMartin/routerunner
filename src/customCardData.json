@@ -385,5 +385,32 @@
                 "priority_boarding": false
             }
         ]
+    },
+    {
+        "name": "Citi AAdvantage Platinum Card",
+        "global_entry": false,
+        "centurion_access": false,
+        "capital_one_access": false,
+        "priority_pass_access": false,
+        "SUB_value": 1125,
+        "annual_fee": 99,
+        "compatible_airlines": [
+            {
+                "airline_name": "American",
+                "compatibility_score": 100,
+                "free_bag": true,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": true
+            },
+            {
+                "airline_name": "Alaska",
+                "compatibility_score": 80,
+                "free_bag": false,
+                "buddy_ticket": false,
+                "airline_lounge_access": false,
+                "priority_boarding": false
+            }
+        ]
     }
 ]
